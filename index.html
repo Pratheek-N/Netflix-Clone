@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <link
+      rel="shortcut icon"
+      href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#141414] font-['Netflix Sans'] antialiased">
+    <div
+      style="
+        background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.4) 25%,
+            rgba(0, 0, 0, 0) 50%,
+            rgba(0, 0, 0, 0) 75%,
+            rgba(0, 0, 0, 0) 100%
+          ),
+          url(images/panipat.webp) no-repeat;
+        background-size: cover;
+      "
+    >
+      <!-- Header Start -->
+      <header
+        class="text-center bg-transperant flex flex-col md:flex-row text-white text-[14px] z-10 relative"
+        style="
+          background-image: linear-gradient(
+            to bottom,
+            rgb(0 0 0 / 70%) 10%,
+            rgb(0 0 0 / 0%)
+          );
+        "
+      >
+        <img
+          src="images/Netflix_Logo_RGB.png"
+          alt=""
+          class="w-[120px] m-auto md:m-2 pt-1 cursor-pointer inline-block md:relative left-8"
+          onclick="clickedHome()"
+        />
+        <ul
+          class="flex align-center text-white text-[14px] md:ml-[35px] md:mt-[22px] flex-col md:flex-row"
+        >
+          <li>
+            <a
+              class="navList home cursor-pointer"
+              onclick="clickedHome()"
+              href="javascript:void(0)"
+              >Home</a
+            >
+          </li>
+
+          <li>
+            <a
+              class="navList tvShows cursor-pointer"
+              onclick="clickedTvShows()"
+              href="javascript:void(0)"
+              >TV Shows</a
+            >
+          </li>
+
+          <li>
+            <a
+              class="navList movies cursor-pointer"
+              onclick="clickedMovies()"
+              href="javascript:void(0)"
+              >Movies</a
+            >
+          </li>
+
+          <li>
+            <a
+              class="navList newPopular cursor-pointer"
+              onclick="clickedNewPopular()"
+              href="javascript:void(0)"
+              >New & Popular</a
+            >
+          </li>
+          <li>
+            <a
+              class="navList myList cursor-pointer"
+              onclick="clickedMyList()"
+              href="javascript:void(0)"
+              >My List</a
+            >
+          </li>
+        </ul>
+
+        <div class="secondaryNavigation md:ml-[500px] pt-5">
+          <ul class="flex flex-col md:flex-row">
+            <li>
+              <div class="navElement">
+                <div class="searchBox">
+                  <button class="searchTab">
+                    <ion-icon name="search" class="text-[24px]"></ion-icon>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <div class="navElement"><a href="">Children</a></div>
+            <li>
+              <div class="navElement">
+                <button class="icon-notification">
+                  <ion-icon name="notifications" class="text-[24px]"></ion-icon>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div class="navElement">
+                <div class="flex md:flex-row flex-col">
+                  <a href="">
+                    <img
+                      src="images/profile.png"
+                      alt=""
+                      class="rounded-md md:min-w-8 md:-mt-1"
+                    />
+                  </a>
+                  <span class="caret ml-[10px] mt-1 text-base cursor-pointer"
+                    ><ion-icon name="caret-down"></ion-icon
+                  ></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!-- Header End -->
+
+      <!-- Section Start -->
+
+      <div class="">
+        <div class="subHeader h-[68px]">
+          <div
+            class="flex items-center justify-start px-[53.953px] h-16 font-['Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif]"
+          >
+            <div class="headerDetail w-36 px-auto">
+              <span class="text-[38px] text-white font-bold leading-[38px]">
+                <p class="heading">Movies</p>
+              </span>
+            </div>
+            <div class="sub-generas mx-[30px] w-28">
+              <div
+                class="generasContainer border border-white text-white bg-black w-28 h-[25px] flex items-center justify-between px-2 hover:bg-transparent cursor-pointer"
+              >
+                <span class="font-semibold text-sm tracking-wide"> Genres</span>
+                <span class="pt-1 text-xs"
+                  ><ion-icon name="caret-down"></ion-icon
+                ></span>
+              </div>
+            </div>
+            <div class="rightToggle w-full h-[50%]">
+              <div class="insideToggle flex justify-end text-center">
+                <button class="w-12 h-8 border">
+                  <span class="text-xl text-white"
+                    ><ion-icon name="options"></ion-icon
+                  ></span>
+                </button>
+                <button class="w-12 h-8 border">
+                  <span class="text-xs text-white"
+                    ><ion-icon name="grid-sharp"></ion-icon
+                  ></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="image w-[540px] h-96 ml-12 mt-8">
+          <img src="images/panipat-text.webp" alt="" class="w-[92%]" />
+          <div class="w-[91%] tracking-wide">
+            <p
+              class="mt-4 text-[1.4vw] text-white font-medium leading-tight"
+              style="text-shadow: 2px 2px 4px rgb(0 0 0 / 45%)"
+            >
+              In 18th-century India, a Maratha commander leads his army in
+              preparation for a fierce battle against Afghan invaders in this
+              film based on real events.
+            </p>
+          </div>
+          <div class="btnLayer mt-5 flex">
+            <button
+              class="border bg-white flex w-28 h-10 rounded justify-center items-center cursor-pointer hover:bg-gray-300/90"
+            >
+              <span class="text-[28px] pt-1 pr-2"
+                ><ion-icon name="play"></ion-icon
+              ></span>
+              <span class="text-[18px] font-semibold">Play</span>
+            </button>
+
+            <button
+              class="ml-2 flex w-[9.5rem] h-10 rounded justify-center text-white items-center cursor-pointer bg-zinc-500/70 hover:bg-zinc-500/50"
+            >
+              <span class="text-[28px] pt-1 pr-2">
+                <ion-icon name="information-circle-outline"></ion-icon
+              ></span>
+              <span class="text-[16px] font-bold tracking-tight"
+                >More Info</span
+              >
+            </button>
+          </div>
+        </div>
+        <div class="rightToggle h-[50%] relative bottom-24">
+          <div class="insideToggle flex justify-end">
+            <a class="w-24 h-8 border-l-4 pt-1 pl-2 bg-zinc-700/70" href="">
+              <span class="text-md text-white font-semibold"><p>13+</p></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <h1 class="text-5xl text-[#DA0813] text-center pt-2 h-[100px]"></h1>
+      </div>
+      <!-- Section End -->
+    </div>
+    <!-- Banner End -->
+    <div class="h-32"></div>
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </body>
+</html>
